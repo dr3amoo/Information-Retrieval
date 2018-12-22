@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+{% block content %}
+	<br>
+	<strong>{{ r }} Relevant Document:</strong>
+	<br>
+	{% for result in results %}
+		<a href="http://127.0.0.1:5000/search/<{{result[0]}}>">{{result[0]}}.txt </a> {{ result[1]}}
+		<br>
+		{{ corpus_new[result[0]][:200]}}............
+		<br>
+	{% endfor %}
+{% endblock %}
